@@ -1,101 +1,209 @@
 body {
-    background-color: lavender;
-    margin: 0;
+  background-color: lavender;
+  margin: 0;
 }
 
 main {
-    min-height: 100vh;
-    padding: 64px 24px 96px;
-    color: black;
-    font-family:'Times New Roman', Times, serif;
+  min-height: 100vh;
+  padding: 64px 24px 96px;
+  color: black;
+  font-family:'Times New Roman', Times, serif;
 }
 
 /* navigation bar */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #C39BD3;
-    font-size: 25px;
-  }
-  
-  li {
-    float: left;
-    border-left: 1px solid #9B59B6
-  }
-  
-  li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #AF7AC5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #C39BD3;
+  font-size: 25px;
+}
+
+li {
+  float: left;
+  border-left: 1px solid #9B59B6
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #AF7AC5;
 }
 
 .active {
-    background-color: #AF7AC5;
+  background-color: #AF7AC5;
 }
 
 /* Alligning & sizing images */
 
 img {
-    max-width: 250px;
+  max-width: 250px;
 }
 
 .pic {
-    float: right;
-    margin: 0px 0px 0px 25px;
+  width: 300px;
+  height: 250px;
+  float: right;
+  object-fit: scale-down;
 }
 
 .logo{
-    max-width: 450px;
-}
-
-.isabelle{
-    float:right;
-    max-width: 100px;
+  max-width: 450px;
 }
 
 /* organizing text */
-section {
-    width: 240px;
-    margin-right: 16px;
-    margin-bottom: 16px;
-    float: left;
+section.info {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 50px;
 }
 
-.info {
-    font-family: 'Times New Roman', Times, serif;
-    width:fit-content ;
-    background: white;
-    margin: 32px;
-    padding: 16px;
-  }
-  
-  .text {
-    font-weight: 900;
-    font-size: 32px;
-    margin: 0 0 16px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .project p {
-    font-size: 16px;
-    font-weight: 100;
-    margin: 0 0 16px;
-  }
+section.info h2.text {
+  text-align: center;
+  margin-top: 0;
+  flex: 1;
+}
+
+section.info img.pic {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+section.info p {
+  text-align: center;
+  margin: 10px;
+  flex: 1;
+}
 
 main {
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .quote{
-    font-size: x-large;
-    font-style: italic;
+  font-size: x-large;
+  font-style: italic;
 }
+
+/* Contact page styling */
+main form {
+    text-align: center;
+  }
+  
+  main label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+  }
+  
+  main input,
+  main textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  
+  main input[type="submit"] {
+    background-color: #C39BD3;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 16px 32px;
+    margin-top: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  main input[type="submit"]:hover {
+    background-color: #AF7AC5;
+  }
+
+  /* media queries */
+
+/* styles for screens with a max width of 600px */
+@media screen and (max-width: 600px) {
+  /* navigation bar styles */
+  ul {
+    font-size: 20px;
+  }
+
+  li {
+    border: none;
+    float: none;
+    display: block;
+  }
+
+  li a {
+    padding: 8px 16px;
+  }
+
+  /* image styles */
+  .pic {
+    float: none;
+    margin: 0 auto;
+  }
+
+  /* contact form styles */
+  main label {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  main input[type="submit"] {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+/* styles for screens with a min width of 601px */
+@media screen and (min-width: 601px) {
+  /* navigation bar styles */
+  ul {
+    font-size: 25px;
+  }
+
+  li {
+    border-left: 1px solid #9B59B6;
+    float: left;
+    display: inline-block;
+  }
+
+  li a {
+    padding: 14px 16px;
+  }
+
+  /* image styles */
+  .pic {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
+
+  /* contact form styles */
+  main label {
+    width: auto;
+    text-align: right;
+    display: inline-block;
+  }
+
+  main input[type="submit"] {
+    padding: 16px 32px;
+    font-size: 20px;
+  }
+}
+ 
