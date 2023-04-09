@@ -12,6 +12,6 @@ This section of the website provides information about Leilani's interests.
 
 This section of the website lists some of the projects Leilani has made.
 
-##Contact Section
+## Contact Section
 
 This section of the website allows users to send a message to Leilani.
